@@ -4,7 +4,7 @@ const CounterApp = () => {
   const { count, increment, decrement } = useCount();
 
   return (
-    <div className="p-8">
+    <div className="min-h-screen">
       <h1 className="text-3xl font-bold mb-4">Counter App</h1>
       <p className="text-xl mb-2">Current Count: {count}</p>
       <button
