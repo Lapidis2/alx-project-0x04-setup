@@ -6,7 +6,7 @@ interface CountContextProps {
   decrement: () => void
 }
 
-export const CountContext = createContext<CountContextProps | undefined>(undefined)
+ const CountContext = createContext<CountContextProps | undefined>(undefined)
 
 export const CountProvider = ({ children }: { children: ReactNode}) => {
 
