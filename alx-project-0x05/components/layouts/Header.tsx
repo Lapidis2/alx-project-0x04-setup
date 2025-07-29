@@ -2,11 +2,11 @@ import Link from "next/link";
 import Button from "../common/Button";
 import { usePathname } from "next/navigation";
 import { useCount } from "@/context/CountContext";
+
 const Header: React.FC = () => {
-const pathname=usePathname()
-const {count}=useCount()
 
-
+  const pathname = usePathname()
+  const { count } = useCount()
 
   return (
     <header className="fixed w-full bg-white shadow-md">
@@ -17,7 +17,7 @@ const {count}=useCount()
 
         {/* Button Group */}
         <div className="flex gap-4">
-		{
+          {
             !["/counter-app"].includes(pathname) ? (
               <>
               <Button
@@ -32,6 +32,7 @@ const {count}=useCount()
               <p className=" font-semibold text-lg">Current count : {count}</p>
             )
           }
+
         </div>
       </div>
     </header>
