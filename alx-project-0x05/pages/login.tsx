@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
-
+import Image from "next/image";
 function login() {
   const [showPassword, setShowPassword] = useState(false);
   return (
     <div className="min-h-screen bg-gray-300 flex flex-col justify-center items-center">
       <h1 className="text-4xl mb-8">Login Page</h1>
 
-      <form action="" className="bg-white p-8 shadow-md  rounded-lg max-w-sm">
+      <form action="" className="bg-white p-8 shadow-lg  rounded-lg max-w-sm">
         <div className="mb-4 ">
           <label htmlFor="email">Email:</label>
           <input
             id="email"
             type="email"
             placeholder="Enter your email"
-            className=" w-full border border-gray-500 py-1 rounded-lg px-2 "
+            className=" w-full font-semibold border border-gray-500 py-1 rounded-lg px-2 "
+			required
           />
         </div>
         <div className="relative">
@@ -23,7 +24,8 @@ function login() {
             type={showPassword ? "text" : "password"}
             id="password"
             placeholder="Enter password"
-            className="w-full border  border-gray-500 rounded-lg py-1 px-2"
+            className="w-full  font-semibold border   border-gray-500 rounded-lg py-1 px-2"
+			required
           />
           <button
             type="button"
@@ -40,6 +42,15 @@ function login() {
         >
           Login
         </button>
+		<p className="text-center">Or</p>
+		<Image
+          src="https://developers.google.com/identity/images/g-logo.png"
+          alt="Google logo"
+          width={20}
+          height={20}
+          className="mr-2"
+        />
+        <span className="text-sm text-gray-800 font-medium">Sign in with Google</span>
       </form>
     </div>
   );
