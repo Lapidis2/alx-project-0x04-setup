@@ -11,3 +11,15 @@ export interface LayoutProps {
  export  interface PageRouteProps {
 	pageRoute: string;
   }
+   export type authContextType = {
+	isLoggedIn: boolean;
+	login: (email: string) => void;
+	logout: () => void;
+	user: { email: string } | null;
+  };
+
+
+  export type themecontextType={
+	theme: "light" | "dark"
+	toggleTheme:()=>void;
+  }
