@@ -14,7 +14,7 @@ type authContextType = {
 //creat context here
 const authContex = createContext<authContextType | undefined>(undefined);
 //create context provider
-export const authProvider = ({ children }: { children: ReactNode }) => {
+export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState<{ email: string } | null>(null);
   const login = (email: string) => {
