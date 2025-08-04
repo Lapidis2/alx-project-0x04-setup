@@ -43,6 +43,7 @@ function login() {
           Login
         </button>
 		<p className="text-center">Or</p>
+		<div className="flex justify-center items-center">
 		<Image
           src="https://developers.google.com/identity/images/g-logo.png"
           alt="Google logo"
@@ -51,6 +52,8 @@ function login() {
           className="mr-2"
         />
         <span className="text-sm text-gray-800 font-medium">Sign in with Google</span>
+		</div>
+	
       </form>
     </div>
   );
